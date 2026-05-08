@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Atelier Tiffany</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header site-header--solid" data-header>
+    <nav class="site-header__inner" aria-label="Main navigation">
+      <div class="nav-links nav-links--left"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#collections">Collection</a><a class="active" href="about.html">About</a></div>
+      <a href="index.html" class="brand"><span>Atelier</span><small>Tiffany</small></a>
+      <div class="nav-actions"><a href="journal.html" class="nav-extra">Journal</a><a href="contact.html" class="nav-extra">Contact</a><button class="icon-btn" type="button" data-open-search aria-label="Open search"><span class="icon icon-search"></span></button><button class="icon-btn" type="button" data-open-cart aria-label="Open cart"><span class="icon icon-bag"></span><span class="count-badge" data-cart-count>0</span></button><button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu"><span></span><span></span></button></div>
+    </nav>
+  </header>
+  <aside class="mobile-menu" data-mobile-menu aria-hidden="true"><button class="mobile-menu__close" type="button" data-menu-close aria-label="Close menu"></button><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></aside>
+  <aside class="cart-drawer" data-cart aria-hidden="true"><div class="drawer-backdrop" data-close-cart></div><div class="cart-panel"><div class="cart-panel__head"><h2>Your Cart</h2><button class="close-btn" type="button" data-close-cart aria-label="Close cart"></button></div><div class="cart-panel__items" data-cart-items></div><div class="cart-panel__foot"><div><span>Subtotal</span><strong data-cart-subtotal>$0</strong></div><button class="btn btn--dark btn--full" type="button">Checkout</button></div></div></aside>
+  <aside class="search-layer" data-search aria-hidden="true"><button class="close-btn search-layer__close" type="button" data-close-search aria-label="Close search"></button><div class="search-layer__content"><p class="eyebrow">Search the atelier</p><input type="search" data-search-input placeholder="Search dresses, silk, couture..."><div class="search-results" data-search-results></div></div></aside>
+
+  <main class="page-main">
+    <section class="page-hero page-hero--image" style="--page-image:url('assets/interior1.png')">
+      <div data-reveal>
+        <p class="eyebrow">Brand story</p>
+        <h1>Luxury built on calm precision.</h1>
+        <p>An atelier mood translated into fashion: clean lines, warm interiors, and thoughtful craft.</p>
+      </div>
+    </section>
+
+    <section class="section story-split story-split--reverse">
+      <div class="story-split__copy" data-reveal>
+        <p class="eyebrow">Craft</p>
+        <h2>The experience should feel personal, polished, and quietly cinematic.</h2>
+        <p>Inspired by high-touch salon hospitality, the brand treats dressing as a ritual. Every page is designed with space, softness, and precision.</p>
+      </div>
+      <div class="story-split__image" data-reveal>
+        <img src="assets/teamfam.jpg" alt="Atelier team editorial portrait">
+      </div>
+    </section>
+
+    <section class="section values">
+      <article data-reveal><span>01</span><h2>Editorial restraint</h2><p>Fewer elements, stronger rhythm, and visual moments that feel intentional.</p></article>
+      <article data-reveal><span>02</span><h2>Premium service</h2><p>Navigation, filters, product details, and checkout surfaces feel calm and useful.</p></article>
+      <article data-reveal><span>03</span><h2>Timeless detail</h2><p>Soft gold, cream, black, fabric texture, and cinematic photography guide the mood.</p></article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__brand"><a class="brand brand--footer" href="index.html"><span>Atelier</span><small>Tiffany</small></a><p>Modern luxury fashion shaped by editorial restraint and timeless detail.</p></div>
+    <div class="footer-col"><h3>Shop</h3><a href="shop.html">New Arrivals</a><a href="shop.html">Evening Wear</a><a href="shop.html">Accessories</a></div>
+    <div class="footer-col"><h3>Atelier</h3><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h3>Visit</h3><p>400 S. Western Ave.<br>Los Angeles, CA</p></div>
+    <div class="site-footer__bottom"><span>Copyright 2026 Atelier Tiffany.</span><span>Luxury ecommerce concept.</span></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
