@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop luxury fashion pieces from Atelier Tiffany.">
+  <title>Shop - Atelier Tiffany</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header site-header--solid" data-header>
+    <nav class="site-header__inner" aria-label="Main navigation">
+      <div class="nav-links nav-links--left">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="index.html#collections">Collection</a>
+        <a href="about.html">About</a>
+      </div>
+      <a href="index.html" class="brand" aria-label="Atelier Tiffany home"><span>Atelier</span><small>Tiffany</small></a>
+      <div class="nav-actions">
+        <a href="journal.html" class="nav-extra">Journal</a>
+        <a href="contact.html" class="nav-extra">Contact</a>
+        <button class="icon-btn" type="button" data-open-search aria-label="Open search"><span class="icon icon-search"></span></button>
+        <button class="icon-btn" type="button" aria-label="Wishlist"><span class="icon icon-heart"></span><span class="count-badge" data-wishlist-count>0</span></button>
+        <button class="icon-btn" type="button" data-open-cart aria-label="Open cart"><span class="icon icon-bag"></span><span class="count-badge" data-cart-count>0</span></button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="mobile-menu" data-mobile-menu aria-hidden="true">
+    <button class="mobile-menu__close" type="button" data-menu-close aria-label="Close menu"></button>
+    <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#collections">Collection</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a>
+  </aside>
+
+  <aside class="cart-drawer" data-cart aria-hidden="true">
+    <div class="drawer-backdrop" data-close-cart></div>
+    <div class="cart-panel">
+      <div class="cart-panel__head"><h2>Your Cart</h2><button class="close-btn" type="button" data-close-cart aria-label="Close cart"></button></div>
+      <div class="cart-panel__items" data-cart-items></div>
+      <div class="cart-panel__foot"><div><span>Subtotal</span><strong data-cart-subtotal>$0</strong></div><button class="btn btn--dark btn--full" type="button">Checkout</button></div>
+    </div>
+  </aside>
+
+  <aside class="search-layer" data-search aria-hidden="true">
+    <button class="close-btn search-layer__close" type="button" data-close-search aria-label="Close search"></button>
+    <div class="search-layer__content"><p class="eyebrow">Search the atelier</p><input type="search" data-search-input placeholder="Search dresses, silk, couture..."><div class="search-results" data-search-results></div></div>
+  </aside>
+
+  <main id="main" class="page-main">
+    <section class="page-hero page-hero--shop">
+      <div data-reveal>
+        <p class="eyebrow">The collection</p>
+        <h1>Shop the atelier.</h1>
+        <p>Curated pieces for evening, ceremony, and every polished moment between.</p>
+      </div>
+    </section>
+
+    <section class="shop-layout">
+      <aside class="filters" data-filters>
+        <div class="filters__head">
+          <h2>Filters</h2>
+          <button type="button" data-clear-filters>Clear</button>
+        </div>
+        <div class="filter-group">
+          <h3>Category</h3>
+          <label><input type="checkbox" name="category" value="evening"> Evening wear</label>
+          <label><input type="checkbox" name="category" value="bridal"> Bridal</label>
+          <label><input type="checkbox" name="category" value="couture"> Couture</label>
+          <label><input type="checkbox" name="category" value="accessories"> Accessories</label>
+        </div>
+        <div class="filter-group">
+          <h3>Size</h3>
+          <label><input type="checkbox" name="size" value="XS"> XS</label>
+          <label><input type="checkbox" name="size" value="S"> S</label>
+          <label><input type="checkbox" name="size" value="M"> M</label>
+          <label><input type="checkbox" name="size" value="L"> L</label>
+        </div>
+        <div class="filter-group">
+          <h3>Color</h3>
+          <label><input type="checkbox" name="color" value="black"> Black</label>
+          <label><input type="checkbox" name="color" value="ivory"> Ivory</label>
+          <label><input type="checkbox" name="color" value="gold"> Gold</label>
+          <label><input type="checkbox" name="color" value="rose"> Rose</label>
+        </div>
+        <div class="filter-group">
+          <h3>Price up to <span data-price-label>$900</span></h3>
+          <input type="range" min="200" max="900" value="900" step="50" data-price-filter>
+        </div>
+      </aside>
+
+      <div class="shop-results">
+        <div class="shop-toolbar">
+          <p><span data-result-count>0</span> pieces</p>
+          <select data-sort aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="low-high">Price low to high</option>
+            <option value="high-low">Price high to low</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+        <div class="active-filters" data-active-filters></div>
+        <div class="product-grid product-grid--shop" data-product-grid="shop"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__brand"><a class="brand brand--footer" href="index.html"><span>Atelier</span><small>Tiffany</small></a><p>Modern luxury fashion shaped by editorial restraint and timeless detail.</p></div>
+    <div class="footer-col"><h3>Shop</h3><a href="shop.html">New Arrivals</a><a href="shop.html">Evening Wear</a><a href="shop.html">Accessories</a></div>
+    <div class="footer-col"><h3>Atelier</h3><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h3>Support</h3><a href="contact.html">Shipping</a><a href="contact.html">Returns</a><a href="contact.html">Care</a></div>
+    <div class="site-footer__bottom"><span>Copyright 2026 Atelier Tiffany.</span><span>Luxury ecommerce concept.</span></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
